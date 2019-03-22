@@ -1,0 +1,9 @@
+int a=4;
+if(a>2){
+    while(a==4){
+        write(a);
+        a=a-1;
+    }
+}else{
+    write(a);
+}

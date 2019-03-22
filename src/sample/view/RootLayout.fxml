@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.RootLayoutController">
+    <bottom>
+        <TextArea fx:id="resultContent" prefHeight="640.0" prefWidth="1200.0" BorderPane.alignment="BOTTOM_CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+    </bottom>
+    <center>
+        <TextArea fx:id="cmmContent" editable="true" prefHeight="335.0" prefWidth="1200.0" promptText="输入 cmm 代码或打开 testFile 文件夹中的 cmm 文件" BorderPane.alignment="TOP_CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="open..." />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Run">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleLexer" text="Lexer" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleParser" text="Parser" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleOutput" text="Run" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
